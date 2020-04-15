@@ -1,4 +1,4 @@
-/****************************************************************************
+﻿/****************************************************************************
 **
 ** Author: Róbert Márki <gsmiko@gmail.com>
 ** Copyright (c) 2016 Róbert Márki
@@ -27,11 +27,11 @@
 ****************************************************************************/
 #ifndef TYPES_H
 #define TYPES_H
+#include <jmespath/jsontypes.h>
 #include <string>
 #include <limits>
 #include <boost/regex/pending/unicode_iterator.hpp>
 #include <boost/multiprecision/cpp_int.hpp>
-#include <nlohmann/json.hpp>
 
 namespace jmespath {
 /**
@@ -63,7 +63,7 @@ using StringIteratorAdaptor
 /**
  * @brief JSON data type
  */
-using Json      = nlohmann::json;
+using Json      = JSONType; /* nlohmann::json;*/
 /**
  * @brief Signed integer type that can hold all values in the range of
  * numeric_limits<size_t>::max() * -1 ... numeric_limits<size_t>::max()
